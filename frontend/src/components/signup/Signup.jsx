@@ -3,6 +3,8 @@ import "./Signup.css";
 import HeadingComp from './HeadingComp';
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Signup = () => {
     const history =useNavigate();
     const [Inputs, setInputs] = useState({email:"",username:"",password:""});
@@ -15,7 +17,7 @@ const Signup = () => {
         await axios.post("http://localhost:1000/api/v1/register",Inputs).then((response)=>{
             if(response.data.message==="User Already Exists")
                 {
-                    alert(response.data.message);
+                    toast.error(response.data.message);
                 }
             else{
                 alert(response.data.message);
@@ -26,6 +28,7 @@ const Signup = () => {
     }
   return (
     <div className='signup'>
+        <ToastContainer />
         <div className="container">
             <div className="row">
                 <div className="col-lg-8 column d-flex justify justify-content-center align-items-center">

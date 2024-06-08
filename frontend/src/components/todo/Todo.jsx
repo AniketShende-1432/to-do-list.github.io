@@ -25,7 +25,6 @@ const Todo = () => {
     else{
       if(id){
         await axios.post("http://localhost:1000/api/v2/addTask",{title:Inputs.title,body:Inputs.body,id:id}).then((response)=>{
-          console.log(response);
         })
         setInputs({title:"",body:""});
         toast.success("Your Task is Added");
@@ -69,13 +68,13 @@ const Todo = () => {
       <div className='todo'>
       <ToastContainer />
         <div className="todo-main container d-flex justify-content-center align-items-center my-4 flex-column">
-            <div className="d-flex flex-column todo-inputs-div w-100 p-1">
+            <div className="d-flex flex-column todo-inputs-div w-75  p-1">
               <input type="text" placeholder='TITLE' className='my-2 p-2 todo-inputs' name='title'
                onClick={show} onChange={change} value={Inputs.title}/>
               <textarea id="textarea" type="text" placeholder='BODY' className='p-2 todo-inputs' name='body'
                onChange={change} value={Inputs.body}/>
             </div>
-            <div className=' w-lg-50 w-100 d-flex justify-content-end my-3'>
+            <div className=' w-lg-50 w-75 d-flex justify-content-end my-3'>
                 <button className='home-btn px-2 py-1' onClick={submit}>Add</button>
             </div>
         </div>
