@@ -25,7 +25,7 @@ const Signin = () => {
     <div><div className='signup'>
     <div className="container">
         <div className="row">
-        <div className="col-lg-5 column  d-flex justify-content-center align-items-center">
+        <div className="col-lg-5 column d-none d-lg-flex justify-content-center align-items-center">
                 <HeadingComp first="Sign" second="In"/>
             </div>
             <div className="col-lg-7 column d-flex justify-content-center align-items-center">

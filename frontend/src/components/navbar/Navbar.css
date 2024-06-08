@@ -13,3 +13,13 @@
     border-radius: 5px;
     font-weight: bold;
 }
+@media (max-width: 576px) {
+    .btn-nav {
+      background-color: white;
+      color:black !important;
+      font-weight :400;
+    }
+    .small{
+        border-bottom: 1px solid;
+    }
+  }

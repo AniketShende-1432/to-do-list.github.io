@@ -39,7 +39,7 @@ const Signup = () => {
                         <button className='btn-signup p-2' onClick={submit}>SignUp</button>
                     </div>
                 </div>
-                <div className="col-lg-4 column d-flex justify justify-content-center align-items-center">
+                <div className="d-lg-block d-none col-lg-4 column d-lg-flex justify justify-content-center align-items-center">
                     <HeadingComp first="Sign" second="Up"/>
                 </div>
             </div>
